@@ -4,9 +4,11 @@ import "./src/config/db.js";
 
 import userRoutes from "./src/routes/userRoute.js";
 import roleRoutes from "./src/routes/adminRoute.js";
+import enquiryRoute from "./src/routes/enquiryRoute.js";
 app.use(express.json());
 app.use("/api/v1", userRoutes);
 app.use("/api/v1",roleRoutes );
+app.use("/api/v1",enquiryRoute );
 
 app.get("/", (req, res) => {
   res.send("welcome");
